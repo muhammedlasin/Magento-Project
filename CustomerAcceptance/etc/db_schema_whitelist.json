@@ -1,0 +1,12 @@
+{
+    "quote": {
+        "column": {
+            "agree": true
+        }
+    },
+    "sales_order": {
+        "column": {
+            "agree": true
+        }
+    }
+}
