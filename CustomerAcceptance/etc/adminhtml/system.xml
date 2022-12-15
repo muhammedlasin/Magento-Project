@@ -6,21 +6,22 @@
         </tab>
         <section id="customeracceptance" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>CustomerAcceptance</label>
+            <label>Customs Acceptance
+Checkbox</label>
             <tab>terrificminds</tab>
             <resource>TerrificMinds_CustomerAcceptance::helloworld_config</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
-                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Module Enable</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Checkbox</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="specificcountry" translate="label" type="multiselect" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Select countries for customs acceptance</label>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Countries for customs acceptance</label>
                     <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
                     <can_be_empty>1</can_be_empty>
                 </field>     
-                 <field id="threshold" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                 <field id="threshold" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Threshold value</label>
                 </field>
             </group>

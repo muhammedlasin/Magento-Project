@@ -26,6 +26,6 @@ class Emailtemplatevars implements \Magento\Framework\Event\ObserverInterface
         } else {
             $transport['Customvariable1'] = "No";
         }
-        //add multiple parameter
+
     }
 }

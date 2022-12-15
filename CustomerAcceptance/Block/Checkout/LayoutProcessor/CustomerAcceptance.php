@@ -30,13 +30,13 @@ class CustomerAcceptance implements LayoutProcessorInterface
         null
         );
 
-        $status = $this->scopeConfig->getValue(
+        $moduleStatus = $this->scopeConfig->getValue(
             "customeracceptance/general/enable",
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
         null
         );
 
-        $threshold = $this->scopeConfig->getValue(
+        $thresholdValue = $this->scopeConfig->getValue(
             "customeracceptance/general/threshold",
                 \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
         null
@@ -44,22 +44,20 @@ class CustomerAcceptance implements LayoutProcessorInterface
 
         $quoteId = $this->checkoutSession->getQuoteId();
         $quote = $this->quoteRepository->get($quoteId);
-        $s = $quote['grand_total'];
-
-        $estimated_country = $this->cart->getQuote()->getShippingAddress()->getCountryId();
+        $grandTotal = $quote['grand_total'];
 
 
 
 
-        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['myKey'] = $countryList;
+        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['countryList'] = $countryList;
 
-        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['myKey2'] = $status;
+        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['moduleStatus'] = $moduleStatus;
 
-        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['myKey3'] = $threshold;
+        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['thresholdValue'] = $thresholdValue;
 
-        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['myKey4'] = $s;
+        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['grandTotal'] = $grandTotal;
 
-        $jsLayout['components']['checkout']['children']['steps']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset']['children']['custom-checkbox']['myKey5'] = $estimated_country;
+
 
 
 
