@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <router id="standard">
+        <route id="TerrificMinds_CustomerAcceptance" frontName="module">
+            <module name="TerrificMinds_CustomerAcceptance"/>
+        </route>
+    </router>
+</config>
